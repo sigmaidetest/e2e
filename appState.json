@@ -1,0 +1,104 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "ebc34427-d540-4236-b9b2-b334d24c8275": {
+        "id": "ebc34427-d540-4236-b9b2-b334d24c8275",
+        "parent": null,
+        "name": "e2e",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "59d7d665-c948-4fbf-8a6b-ff99be80af5e"
+        ],
+        "isRemovable": false,
+        "filePath": "e2e"
+      },
+      "59d7d665-c948-4fbf-8a6b-ff99be80af5e": {
+        "id": "59d7d665-c948-4fbf-8a6b-ff99be80af5e",
+        "parent": "ebc34427-d540-4236-b9b2-b334d24c8275",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "e2e/lambda.js",
+        "code": "exports.handler = function (event, context, callback) {\n\n    console.log(event);\n    callback(null, {\n        \"isBase64Encoded\": true,\n        \"statusCode\": 200,\n        \"headers\": {\n            \"Access-Control-Allow-Origin\": \"*\"\n        },\n        \"body\": JSON.stringify({ msg: \"hello\" })\n    });\n}",
+        "triggers": [
+          {
+            "resourceName": "apigusEast1TestAPIMyLambdadelete",
+            "config": {}
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "timeout": 60,
+          "memory": 128
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "ebc34427-d540-4236-b9b2-b334d24c8275",
+    "openFiles": [
+      "59d7d665-c948-4fbf-8a6b-ff99be80af5e"
+    ],
+    "currentFileId": "59d7d665-c948-4fbf-8a6b-ff99be80af5e",
+    "resources": {
+      "apigusEast1TestAPIMyLambdadelete": {
+        "name": "apigusEast1TestAPIMyLambdadelete",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "TestAPI",
+          "apiId": "0itznun7w3",
+          "endpointType": "EDGE",
+          "rootResourceId": "h2lelj6j7k",
+          "existingResources": {
+            "/MyLambda": "98nqbj",
+            "/": "h2lelj6j7k"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/MyLambda",
+          "resourceName": "MyLambda",
+          "resourceId": "98nqbj",
+          "restMethod": "DELETE",
+          "proxyIntegration": true,
+          "enableCORS": true,
+          "stageMode": 1,
+          "stageName": "Test",
+          "stageDeploymentId": "nnbkp9"
+        },
+        "globallyEditable": false
+      }
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    },
+    "lambdaId": "59d7d665-c948-4fbf-8a6b-ff99be80af5e"
+  },
+  "PROJECT_META": {
+    "projectName": "e2e",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "lastSave": 1541160071526
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "e2e",
+      "url": "https://github.com/sigmaidetest/e2e"
+    }
+  }
+}
